@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MicroService" />
+        <module name="DiscoveryService" />
+        <module name="GatewayService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Auth as service" target="19" />
+      <module name="auth-as-service" target="19" />
+      <module name="AuthService" target="19" />
+      <module name="Microservice Architecture" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
