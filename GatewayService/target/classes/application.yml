@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
@@ -12,15 +12,20 @@ spring:
           predicates:
             - Path=/api/v1/ms/**
         - id: discovery-service
-          uri: http://localhost:8761
+          uri: http://user:1234@localhost:8761
           predicates:
-            - Path=/eureka
+            - Path=/eureka/web
           filters:
             - SetPath=/
         - id: discovery-service-static
-          uri: http://localhost:8761
+          uri: http://user:1234@localhost:8761
           predicates:
             - Path=/eureka/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/microservice-architecture
 
 logging:
   level:
@@ -31,4 +36,4 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://user:1234@localhost:8761/eureka

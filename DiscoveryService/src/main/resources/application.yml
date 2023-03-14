@@ -4,6 +4,8 @@ spring:
   application:
     name: discovery-service
 eureka:
+  username: ${EUREKA_USERNAME:user}
+  password: ${EUREKA_PASSWORD:1234}
   instance:
     prefer-ip-address: true
   client:
