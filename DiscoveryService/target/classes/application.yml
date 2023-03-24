@@ -7,7 +7,8 @@ eureka:
   username: ${EUREKA_USERNAME:user}
   password: ${EUREKA_PASSWORD:1234}
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
+    hostname: localhost
   client:
     fetch-registry: false
     register-with-eureka: false
